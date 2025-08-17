@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    
+}
+:root{
+    --text-color: rgb(213, 203, 178);
+    --bg: rgba(0, 0, 0, 0.687);
+    --border-radius: 4vw;
+    --width:20vw;
+}
+a{
+    text-decoration: none;
+}
+.text{
+    font-weight: 250;
+    color: var(--text-color);
+}
+.title{
+    font-size: 2.5em;
+}
+body{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background{
+    z-index: -1;
+    position: absolute; 
+    right: 0; 
+    bottom: 0; 
+    width: 100vw; 
+    height: auto;
+}
+main{
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 60vh;
+    padding: 3vw;
+    border-radius: var(--border-radius);
+}
+main input{
+    color: var(--text-color);
+    width: var(--width);
+    border-radius: 100px;
+    border: 0;
+    outline: 0;
+    background: rgb(72, 72, 72);
+    padding: 1vw;
+}::placeholder{
+    color: rgba(211, 211, 211, 0.575);
+    font-weight: 400;
+}
+.login{
+    color: black;
+    background: white;
+    padding: 1vw;
+    border: 0;
+    border-radius: var(--border-radius);
+    width: var(--width);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: transform 0.5s ease;
+    letter-spacing: 0.3vw;
+}
+.login:hover{
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+}
+
+
+
+.btn-back{
+    height: 7vw;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    color:white
+}

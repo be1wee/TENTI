@@ -1,0 +1,272 @@
+@font-face {
+    font-family: winky;
+    src: url(/fonts/WinkyRough-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "winky";
+    overflow-x: hidden;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    :root{
+        --heightOfItem:30vw;
+        --tolshina: 4px;
+    }
+    
+
+    header{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 5vw;
+        padding: 5vw;
+    }
+    .btn-back{
+        height: 50px;
+        position: absolute;
+        top: 2vw;
+        left: 2vw;
+    }
+    #iconOfStore{
+        --size-of-icon: 20vw;
+        width: var(--size-of-icon);
+        height: var(--size-of-icon);
+    }
+    #titleOfStore{
+        font-size: 7vw;
+        text-align: center;
+    }
+    #descriptionOfStore{
+        font-size: 4vw;
+    }
+
+    .tabs input[type="radio"] { display: none; }
+    .labels{
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        height: 30vw;
+        border-top: var(--tolshina) solid black;
+        border-bottom: var(--tolshina) solid black;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        padding-left: 5vw;
+        padding-right: 5vw;
+        gap: 5vw;
+    }::-webkit-scrollbar { width: 0 !important }
+
+    .labels label{
+        white-space: nowrap;
+        padding: 4vw;
+        color:black;
+        border-radius: 3vw;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        font-size: 4vw;
+        border: var(--tolshina) solid black;
+    }
+
+    .tabs input#tab1:checked ~ .labels label[for="tab1"],
+    .tabs input#tab2:checked ~ .labels label[for="tab2"],
+    .tabs input#tab3:checked ~ .labels label[for="tab3"],
+    .tabs input#tab4:checked ~ .labels label[for="tab4"],
+    .tabs input#tab5:checked ~ .labels label[for="tab5"]{
+        background: black;
+        color: white;
+        font-weight: bold;
+    }
+
+    .tab-contents .tab-content{
+        display: none;
+    }
+    .tabs input#tab1:checked ~ .tab-contents .tab-content:nth-child(1),
+    .tabs input#tab2:checked ~ .tab-contents .tab-content:nth-child(2),
+    .tabs input#tab3:checked ~ .tab-contents .tab-content:nth-child(3),
+    .tabs input#tab4:checked ~ .tab-contents .tab-content:nth-child(4),
+    .tabs input#tab5:checked ~ .tab-contents .tab-content:nth-child(5) {
+    display: flex;
+    }
+
+
+
+    .tab-content{
+        --intervals:5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--intervals);
+        padding: var(--intervals);
+    }
+
+    .item{
+        height: var(--heightOfItem);
+        width: max-content;
+        
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    .imgOfItem{
+        height: var(--heightOfItem);
+    }
+    .nameOfItem{
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(2px);
+
+        width: 100%;
+
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+
+        font-size: 30px;
+        color: black;
+    }
+
+}
+@media (min-aspect-ratio: 1/1){
+    :root{
+        --heightOfItem:25vw;
+        --tolshina: 6px;
+    }
+    
+
+    header{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 5vw;
+        padding: 5vw;
+    }
+    .btn-back{
+        height: 80px;
+        position: absolute;
+        top:2vw;
+        left:2vw;
+
+    }
+    #iconOfStore{
+        --size-of-icon: 20vw;
+        width: var(--size-of-icon);
+        height: var(--size-of-icon);
+    }
+    #titleOfStore{
+        font-size: 5vw;
+        text-align: center;
+    }
+    #descriptionOfStore{
+        font-size: 2.5vw;
+    }
+
+    .tabs input[type="radio"] { display: none; }
+    .labels{
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        height: 13vw;
+        border-top: var(--tolshina) solid black;
+        border-bottom: var(--tolshina) solid black;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        gap: 5vw;
+    }::-webkit-scrollbar { width: 0 !important }
+
+    .labels label{
+        white-space: nowrap;
+        padding: 2vw;
+        color:black;
+        border-radius: 3vw;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        font-size: 2.5vw;
+        border: var(--tolshina) solid black;
+    }
+
+    .tabs input#tab1:checked ~ .labels label[for="tab1"],
+    .tabs input#tab2:checked ~ .labels label[for="tab2"],
+    .tabs input#tab3:checked ~ .labels label[for="tab3"],
+    .tabs input#tab4:checked ~ .labels label[for="tab4"],
+    .tabs input#tab5:checked ~ .labels label[for="tab5"]{
+        background: black;
+        color: white;
+        font-weight: bold;
+    }
+
+    .tab-contents .tab-content{
+        display: none;
+    }
+    .tabs input#tab1:checked ~ .tab-contents .tab-content:nth-child(1),
+    .tabs input#tab2:checked ~ .tab-contents .tab-content:nth-child(2),
+    .tabs input#tab3:checked ~ .tab-contents .tab-content:nth-child(3),
+    .tabs input#tab4:checked ~ .tab-contents .tab-content:nth-child(4),
+    .tabs input#tab5:checked ~ .tab-contents .tab-content:nth-child(5) {
+    display: flex;
+    }
+
+
+
+    .tab-content{
+        --intervals:4vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--intervals);
+        padding: var(--intervals);
+    }
+
+    .item{
+        height: var(--heightOfItem);
+        width: max-content;
+        
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    .imgOfItem{
+        height: var(--heightOfItem);
+    }
+    .nameOfItem{
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(2px);
+
+        width: 100%;
+
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+
+        font-size: 30px;
+        color: black;
+    }
+}
+
+
+
+
+

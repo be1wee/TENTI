@@ -1,0 +1,218 @@
+@font-face {
+    font-family: roboto;
+    src: url(/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+    --space : 200px;
+    --gap: 10vw;
+    --lenght-of-store: 40vw;
+}
+
+main a{
+    text-decoration: none;
+}
+@media (max-aspect-ratio: 1/1)  {
+    :root{
+        --size-of-icon: 22vw;
+    }
+    body{
+        
+    width: 100vw;
+    overflow-x: hidden;
+
+    background: url(/pictures/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "roboto";
+    }
+
+    main{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        margin-bottom: 10vw;
+    }
+
+    header{
+        height: 15vw;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #94949480;
+        backdrop-filter: blur(10px);
+
+        position: sticky;
+        top: 0;
+        border-radius: 0 0 10vw 10vw;
+        
+        margin-bottom: var(--gap);
+    }
+
+    .link-back{
+        position: absolute;
+        left: 15vw;
+    }
+    .btn-back{
+        width:10vw;
+    }
+
+    #title{
+        font-size: 12vw;
+        text-align: center;
+        color: #7a007a;
+    }
+
+    .store{
+        height: 35vw;
+        background: #ffa347;
+        border: none;
+        border-radius: 10vw;
+        box-shadow: black 0px 0px 25px 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .div_store{
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        gap: 7vw;
+        align-items: center;
+    }
+    .div_icon{
+        height: var(--size-of-icon);
+        background: white;
+        border: none;
+        border-radius: 1000px;
+    }
+    .iconOfStore{
+        height: var(--size-of-icon);
+    }
+    .text{
+        font-family: "winky";
+        color: #7a007a   ;
+    }
+    .titleOfStore{
+        font-size: 7vw;
+        text-align: center;
+    }
+    .description{
+        font-size:3vw;
+    }
+
+}
+
+@media (min-aspect-ratio: 1/1)  {
+    :root{
+        --size-of-icon: 12vw;
+        --border: 5px;
+    }
+    body{
+        font-family: "roboto";
+        font-weight: 400;
+        overflow-x: hidden;
+        
+        background: white;
+    }
+    #title{
+        font-size: 7vw;
+        font-weight: 300;
+    }
+    .titleOfStore{
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 300;
+    }
+    .description{
+        font-size: 1.2vw;
+    }
+    .text{
+        color: black;
+    }
+
+    header{
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(8px);
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        top: 0px;
+
+        width: 100vw;
+        height: 15vw;
+
+        color:black;
+        font-size: 4vw;
+        margin-bottom: 2vw
+    }
+    
+
+    .link-back{
+        position: absolute;
+        left: 4vw;
+    }
+    .btn-back{
+        width:5vw;
+    }
+    main{
+        width: 100%;
+        display: grid;
+        justify-self: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, var(--lenght-of-store));
+
+        gap: 3vw;
+        margin-bottom: 5vw;
+    }
+    .store{
+        background: white;
+        border: var(--border) solid black;
+        border-radius: 2vw;
+        padding: 1vw
+    }
+    .div_store{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-self: center;
+        gap: 1vw;
+    }
+    .iconOfStore{
+        width: var(--size-of-icon);
+    }
+    .div_icon{
+        background: white;
+        height: var(--size-of-icon);
+        border: var(--border) solid black;
+        border-radius: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+
+
+
