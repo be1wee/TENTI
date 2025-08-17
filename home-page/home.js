@@ -17,12 +17,6 @@ const search_btn = document.getElementById("search")
 const search_block = document.getElementById("search-block")
 const close_btn = document.getElementById("close-search-block")
 
-// search_btn.addEventListener('click', function(){
-//   search_block.style.display = "block"
-// });
-// close_btn.addEventListener('click', function(){
-//   search_block.style.display = "none"
-// });
 
 search_btn.addEventListener('click', () => {
   search_block.classList.add('visible');
